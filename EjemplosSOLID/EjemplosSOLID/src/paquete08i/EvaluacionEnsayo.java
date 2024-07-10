@@ -35,7 +35,9 @@ public class EvaluacionEnsayo implements EvaluacionTipoDos {
     
     @Override
     public void establecerPromedioEnsayo() {
-
+        // Al ser una interfaz, la clase debe usar los metodso que existen
+        // dentro de la interfaz, por ello se hace uso de los metodos establecer
+        // y obtener, de acuerdo a la funcionalidad que van a tener.
         promedioEnsayo = obtenerTotalProblemas() / obtenerNumeroProblemas();
 
     }
