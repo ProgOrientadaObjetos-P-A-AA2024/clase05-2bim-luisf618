@@ -11,17 +11,17 @@ public class Principal {
 
     public static void main(String[] args) {
 
-        TarjetaCredito tar = new TarjetaCredito("Visa", "1111222233334444");
+        Banco ban = new Banco();
+        ban.establecerNombre("Banco del Pichincha");
+
+        TarjetaCredito tar = new TarjetaCredito("Visa", "111122223333444", ban);
 
         MayorEdad representante = new MayorEdad("José", tar);
 
         MenorEdad menor = new MenorEdad("Felipe", representante);
 
-        System.out.printf("Nombre:%s - Nombre de Tarjeta:%s\nNumero de Tarjeta:"
-                + " %s\n",
-                menor.obtenerNombre(),
+        System.out.printf("Numero de Tarjeta: %s - Nombre del banco: %s\n",
                 menor.obtenerRepresentante().obtenerTarjeta().obtenerNombre(),
-                menor.obtenerRepresentante().obtenerTarjeta().obtenerNumero());
-
+                menor.obtenerRepresentante().obtenerTarjeta().obtenerBanco().obtenerNombre());
     }
 }
